@@ -205,12 +205,13 @@ void Test::test9()
 	test_List = new LinkedListOfInts();
 	test_List->addFront(3);
 	test_List->removeFront();
-	if (test_List->size() == 0){
+	if (test_List->size() == 0 && test_List->removeFront() == true){
         std::cout << "Pass";
     }
 	else {
 		std::cout <<" Fail: ";
 		std::cout << "Size: "<< test_List->size();
+		std::cout << " Return Value: " << test_List->removeFront();
 	}
 }
 
@@ -220,12 +221,13 @@ void Test::test10()
 	test_List = new LinkedListOfInts();
 	test_List->addBack(3);
 	test_List->removeBack();
-	if(test_List->size() == 0){
+	if(test_List->size() == 0 && test_List->removeBack() == true){
         std::cout << "Pass";
     }
 	else {
 		std::cout << " Fail: ";
 		std::cout << "Size: "<< test_List->size();
+		std::cout << " Return Value: " << test_List->removeBack();
 	} 
 }
 
@@ -235,15 +237,16 @@ void Test::test11()
 	test_List->addFront(3);
 	test_List->addFront(6);
 	test_List->removeFront();
-	if((test_List->toVector())[0] == 6 && (test_List->toVector()).size() == 1){
-        std::cout << "Pass";
+	if((test_List->toVector())[0] == 6 && (test_List->toVector()).size() == 1 && test_List->removeFront() == true){
+        std::cout << "Pass:";
+	std::cout << " Return Value: " << test_List->removeFront();
     }
 	else {
 		std::cout << "Fail: ";
-		std::cout << "List: ";
+		/**std::cout << "List: ";
 		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
-		}
+		}**/
 		std::cout << " Return Value: " << test_List->removeFront();
 	}
 }
@@ -254,15 +257,15 @@ void Test::test12()
 	test_List->addFront(3);
 	test_List->addFront(6);
 	test_List->removeBack();
-	if ((test_List->toVector())[0] == 3 && (test_List->toVector()).size() == 1){
-        std::cout << "Pass";
+	if ((test_List->toVector())[0] == 3 && (test_List->toVector()).size() == 1 && test_List->removeBack() == true){
+        std::cout << "Pass:";
     }
 	else {
 		std::cout << "Fail: ";
-		std::cout << "List: ";
+		/**std::cout << "List: ";
 		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
-		}
+		}**/
 		std::cout << " Return Value: " << test_List->removeBack();
 	}
 }
@@ -291,10 +294,10 @@ void Test::test14()
     }
 	else {
 		std::cout << "Fail: ";
-		std::cout << "List: ";
+		/**std::cout << "List: ";
 		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
-		}
+		}**/
 	} 
 }
 
