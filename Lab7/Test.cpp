@@ -241,7 +241,7 @@ void Test::test11()
 	else {
 		std::cout << "Fail: ";
 		std::cout << "List: ";
-		for (int i = 0; i < test_List->toVector().size(); i++) {
+		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
 		}
 		std::cout << " Return Value: " << test_List->removeFront();
@@ -260,7 +260,7 @@ void Test::test12()
 	else {
 		std::cout << "Fail: ";
 		std::cout << "List: ";
-		for (int i = 0; i < test_List->toVector().size(); i++) {
+		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
 		}
 		std::cout << " Return Value: " << test_List->removeBack();
@@ -292,7 +292,7 @@ void Test::test14()
 	else {
 		std::cout << "Fail: ";
 		std::cout << "List: ";
-		for (int i = 0; i < test_List->toVector().size(); i++) {
+		for (unsigned int i = 0; i < test_List->toVector().size(); i++) {
 			std::cout << test_List->toVector()[i] << " ";
 		}
 	} 
