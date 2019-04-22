@@ -1,0 +1,9 @@
+Bug guesses:
+	1. isEmpty() always returns true
+	2. removeFront() does not decrement the size
+	3. removeBack() does not decrement the size
+	4. addBack()  does not add to back, adds to front instead
+	5. removeBack() does not remove back
+	6. removeFront() does not remove front
+	7. removeBack() always returns false
+	8. removeFront() always returns false
